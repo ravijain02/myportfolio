@@ -1,0 +1,102 @@
+.d-2 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px 20px;
+    align-items: center;
+    justify-items: center;
+    height: calc(100% - 50px);
+}
+.d-2 .light {
+    color: #0d0b0b;
+}
+.myinfo {
+    align-items: center;
+}
+.myinfo .profession {
+    color: aqua;
+}
+.myinfo .downloadbtn {
+    color: #000;
+    background: aqua;
+    padding: 10px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+}
+
+.downloadbtn:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.downloadbtn:active:after {
+  background: transparent;
+}
+
+.downloadbtn:hover:before {
+  opacity: 1;
+}
+
+.downloadbtn:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.downloadbtn:after {
+  background: #111;
+}
+
+.downloadbtn:after {
+  background: aqua;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.myphoto img {
+    width: 400px;
+    border-radius: 50%;
+    margin-right: 20px;
+    filter: drop-shadow(0 8px 10px  rgba(3, 232, 244, 0.957));
+}
+
+@media (max-width:600px) {  
+.d-2 {
+  display: block;
+}
+.d-2 .myinfo{
+  text-align: left;
+}
+.d-2 .myphoto {
+  text-align: center;
+}
+.d-2 .myphoto  img{
+  width: 280px;
+}
+
+}

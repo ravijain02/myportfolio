@@ -1,0 +1,240 @@
+.navbar {
+  display: flex;
+  font-family: sans-serif;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 15px 7%;
+  height: 50px;
+  border-bottom: 1px solid #000000;
+  flex-wrap: wrap;
+  transition: 0.5s;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin: 0 10px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
+}
+ul li:hover {
+  color: aqua;
+}
+
+.toggle_theme {
+  width: 20px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.toggle_theme.dark {
+  filter: invert(1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.light {
+  color: #fff;
+}
+
+.light .navbar {
+  background: #fff;
+  color: #000;
+}
+.contact-me{
+  display: flex;
+  align-items: center;
+}
+.contactbnt,
+.contactbntlight {
+  width: 100px;
+  height: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.contactbnt {
+  color: #fff;
+  background: #111;
+  font-weight: 700;
+  border: 1px solid #fff;
+}
+
+.contactbntlight {
+  color: #000;
+  background: #fff;
+  font-weight: 700;
+  border: 1px solid #000;
+}
+
+.contactbnt:before,
+.contactbntlight:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.contactbnt:active,
+.contactbntlight:active {
+  color: #000;
+}
+
+.contactbnt:active:after,
+.contactbntlight:active:after {
+  background: transparent;
+}
+
+.contactbnt:hover:before,
+.contactbntlight:hover:before {
+  opacity: 1;
+}
+
+.contactbnt:after,
+.contactbntlight:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.contactbnt:after {
+  background: #111;
+}
+
+.contactbntlight:after {
+  background: #fff;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.open .line:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+
+@media (max-width:600px) {  
+  ul {
+    display: none;
+  }
+  /* .contactbnt, .contactbntlight {
+    display: none;
+  } */
+  .light .line {
+    background: #000;
+  }
+  .hamburger{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .hamburger.open {
+    position: relative;
+    z-index: 10000;
+  }
+  .menu.open ul {
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    left: 0;
+    position: absolute;
+    background: #00ffffcc;
+    width: 100vw;
+    gap: 5vw 1vw;
+    z-index: 9999;
+    align-items: center;
+    height: 100vh;
+    padding: 12vw 0vw;
+    animation: backcolor 1s forwards;
+    backdrop-filter: blur(5px);
+
+  }
+  .menu.open ul li {
+    color: #0d0e0fad;
+    border-bottom: 1px solid #0d0e0fad;
+    padding: 2vw 0vw;
+    width: 100vw;
+    position: relative;
+    text-align: left;
+    top: 4vh;
+    left: 6vw;
+    padding: 2vw 6vw;
+    animation: slidein 2s forwards;
+  }
+
+  @keyframes backcolor {
+      0%{
+        background: linear-gradient(to bottom left, #00ffff92, #00ffff92);
+      }
+      100% {
+        background:  linear-gradient(to bottom left,#00ffff92, #00ffffcc);
+      }
+  }
+
+  @keyframes slidein {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      color: #000000da;
+    }
+  }
+}
