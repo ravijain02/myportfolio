@@ -84,10 +84,14 @@
     margin-right: 20px;
     filter: drop-shadow(0 8px 10px  rgba(3, 232, 244, 0.957));
 }
+.aboutme {
+  padding: 10px 20px;
+}
 
 @media (max-width:600px) {  
 .d-2 {
   display: block;
+  height: 100%;
 }
 .d-2 .myinfo{
   text-align: left;

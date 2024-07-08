@@ -29,6 +29,20 @@ ul li {
 ul li:hover {
   color: aqua;
 }
+ul a {
+  text-decoration: none;
+  color: inherit;
+}
+ul a:visited {
+  color: inherit;
+}
+
+ul .active li {
+  color: #00ffffcc;
+  border-bottom: 2px solid #00ffffcc;
+  animation: borderExpand 0.5s ease-in-out forwards;
+}
+
 
 .toggle_theme {
   width: 20px;

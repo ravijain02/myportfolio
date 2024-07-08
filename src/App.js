@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 import './App.css'
-import Header from './components/Header';
-import Home from './pages/home';
-import About from './pages/about';
+import Layout from './components/Layout'
+import Home from './pages/home'
+import About from './pages/about'
+import Projects from './pages/projects'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Skills from './pages/skills'
 
 function App() {
 
@@ -14,12 +17,17 @@ function App() {
   }, [theme])
 
   return (
-      <div className={`container ${theme}`}>
-        <Header theme={theme} setTheme={setTheme} />
-        <Home theme={theme} setTheme={setTheme} />
-        <About theme={theme} setTheme={setTheme} />
-      </div>
-  );
+    <BrowserRouter>
+      <Layout theme={theme} setTheme={setTheme}>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/project' element={<Projects />} />
+          <Route path='/skills' element={<Skills />} />
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  )
 }
 
 export default App;

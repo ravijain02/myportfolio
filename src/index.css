@@ -11,10 +11,15 @@ body {
   height: 100vh;
   transition: 0.5s;
 }
+.container.dark {
+  background-color: #282c34;
+  color: #fff;
+}
 .container.light {
-  background-color: #fff;
+  background-color: #d6e4dd54;
   color: #282c34;
 }
+
 .title {
   font-size: 30px;
   color: aqua;
