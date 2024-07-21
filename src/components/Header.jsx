@@ -27,13 +27,13 @@ const Header = ({ theme, setTheme }) => {
         <div className={`menu ${menuOpen ? 'open' : ''}`}>
           <ul>
             <NavLink to='/' exact activeClassName='active' onClick={closeMenu}><li>Home</li></NavLink>
-            <NavLink to='/about' activeClassName='active' onClick={closeMenu}><li>About me</li></NavLink>
-            <NavLink to='/project' activeClassName='active' onClick={closeMenu}><li>Project</li></NavLink>
+            <NavLink to='/about' activeClassName='active' onClick={closeMenu}><li>About</li></NavLink>
+            <NavLink to='/project' activeClassName='active' onClick={closeMenu}><li>Projects</li></NavLink>
             <NavLink to='/skills' activeClassName='active' onClick={closeMenu}><li>Skills</li></NavLink>
           </ul>
         </div>
         <div className='contact-me'>
-          <button className={theme === 'dark' ? 'contactbnt' : 'contactbntlight'}>Contact Me</button>
+        <NavLink to='/contact'><button className={theme === 'dark' ? 'contactbnt' : 'contactbntlight'}>Contact Me</button></NavLink>
           <img src={theme === 'dark' ? toggle_dark : toggle_light} alt='Toggle Theme' onClick={toggleTheme} className={theme === 'dark' ? 'toggle_theme dark' : 'toggle_theme'} />
         </div>
         <div className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>

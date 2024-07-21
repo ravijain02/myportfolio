@@ -13,6 +13,7 @@
 
 ul {
   display: flex;
+  gap: 20px;
   align-items: center;
   list-style: none;
   font-weight: 700;
@@ -21,7 +22,6 @@ ul {
 }
 
 ul li {
-  margin: 0 10px;
   display: inline-block;
   cursor: pointer;
   font-size: 20px;
@@ -148,6 +148,18 @@ ul .active li {
 
 .contactbntlight:after {
   background: #fff;
+}
+
+@keyframes borderExpand {
+  0%{
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 @keyframes glowing {

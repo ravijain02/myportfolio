@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/home.css'
 import Profile from '../assets/profilepicture.png'
+import Resume from '../assets/Ravi_Full_Stack_Dev_Resume.pdf'
 
 function Home() {
   return (
@@ -20,7 +21,9 @@ function Home() {
               Explore my portfolio to see a variety of projects that showcase my skills in both front-end and back-end development. 
               my work reflects my dedication to quality and performance.
             </p>
-            <button className='downloadbtn'>Download Resume</button>
+            <a href={Resume} download="Ravi_Jain_Resume.pdf">
+              <button className='downloadbtn'>Download Resume</button>
+            </a>
         </div>
     </div>
   )

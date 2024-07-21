@@ -6,6 +6,7 @@ import About from './pages/about'
 import Projects from './pages/projects'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Skills from './pages/skills'
+import Contact from './pages/contact'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/project' element={<Projects />} />
           <Route path='/skills' element={<Skills />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       </Layout>
     </BrowserRouter>
