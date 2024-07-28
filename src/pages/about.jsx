@@ -1,23 +1,30 @@
 import React from 'react'
 import '../styles/home.css'
+import MERN from '../assets/mern-stack.png'
 
 const About = () => {
   return (
       <div className='aboutme'>
         <h2 className='title'>About Me</h2>
-        <p> 
-          I am Ravi Kumar Jain, a dedicated and proficient full-stack software developer with approximately 2 years of professional experience in both front-end and back-end development. My expertise spans across various technologies including HTML, CSS, JavaScript, React.js, Node.js, Express, and MongoDB.
-        </p>
-        <p>
-          Throughout my career, I have demonstrated my ability to build responsive, user-friendly web applications, optimize performance, and integrate complex functionalities. I am particularly skilled in developing and deploying robust web applications, having successfully created an attendance tracking website and an eSports platform that significantly enhanced user engagement and operational efficiency.
-        </p>
-          My technical skills are complemented by a strong foundation in computer science, with a Master’s degree in Information Technology and a Bachelor's degree in Computer Science from reputed institutions. I have also completed a comprehensive UI Full Stack Course, further honing my technical abilities.
-        <p>
-          In addition to my technical skills, I am highly self-motivated, a quick learner, and an effective team player. My strengths include flexible time management, decision-making, problem-solving, and critical thinking, which enable me to tackle challenging projects efficiently and deliver high-quality results.
-        </p>
-        <p>
-          I am passionate about leveraging my skills to contribute to innovative projects and continuously learn and grow in the field of software development.
-        </p>
+        <div className='d-2'>
+            <div className='imgcont'>
+              <img src={MERN} alt='' />
+            </div>
+            <div>
+              <p> 
+                I am Ravi Kumar Jain, a dedicated and proficient <span>full-stack software developer</span> with approximately <span>2 years of professional experience</span> in both <span>front-end and back-end development</span>. My expertise spans across various technologies including <span>HTML, CSS, JavaScript, React.js, Node.js, Express, and MongoDB</span>
+              </p>
+              <div>
+                <h3 className='title'>Academic Qualification</h3>
+                <div className='education-list'>
+                  <div className=''>M.Sc. (IT) - Govt. N.P.G. College of Science, Raipur, Year 2020, Secured 70%</div>
+                  <div className='education'>B.Sc. (CS) - Central College of IT Raipur, University PTRSU, Year 2018, Secured 60%</div>
+                  <div className='education'>High School (10+2) - Govt. Rashtriya H. S. School, Raipur, Year 2015, Secured 68%</div>
+                  <div className='education'>High School (10) - Govt. H. S. School, Ahaar, Tikamgarh, Year 2013, Secured 70%</div>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
   )
 }

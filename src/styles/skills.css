@@ -3,10 +3,22 @@
     text-align: center;
   }
   
-  .skills-cards{
+  .skills-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 6;
+  }
+  .skills-cards .skill-title {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .skills-cards .skill-title img {
+    width: 100%;
+    height: 100px;
   }
 
   h2 {
@@ -14,9 +26,6 @@
     margin-bottom: 20px;
   }
   
-  .skill {
-    margin: 20px 0;
-  }
   
   .skill h3 {
     font-size: 1.2rem;
@@ -29,6 +38,7 @@
     border-radius: 25px;
     border: 1px solid #240ed766;
     overflow: hidden;
+    margin-bottom: 24px;
   }
   
   .skill-level {
